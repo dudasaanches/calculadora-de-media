@@ -18,10 +18,11 @@ var peso3 = document.getElementById("peso3")
 var peso4 = document.getElementById("peso4")
 var peso5 = document.getElementById("peso5")
 var texto2 = document.getElementById("texto2")
+
 var ponderar = document.getElementById('media-p')
 var art = document.getElementById('ma')
 var pon = document.getElementById('mp')
-var media = document.getElementById("media-a")
+var aritmetica = document.getElementById("media-a")
 
 ponderar.style.display = 'none'
 
@@ -32,7 +33,7 @@ function mediaAritmetica(event) {
     var result = ma / 5
 
     if (result >= 7) {
-        texto.innerHTML = "Aprovado, com a média de:" + result.toFixed(2)
+        texto.innerHTML = "Aprovado, com a média de: " + result.toFixed(2)
     }
     else if (result >= 5 && result <= 6.9) {
         texto.innerHTML = "De exame, com a média de: " + result.toFixed(2)
@@ -57,7 +58,7 @@ function mediaPonderada(event) {
     var result2 = mp /(parseFloat(peso1.value) + parseFloat(peso2.value) + parseFloat(peso3.value) + parseFloat(peso4.value) + parseFloat(peso5.value))
 
     if (result2 >= 7) {
-        texto2.innerHTML = "Aprovado, com a média de:" + result2.toFixed(2)
+        texto2.innerHTML = "Aprovado, com a média de: " + result2.toFixed(2)
     }
     else if (result2 >= 5 && result2 <= 6.9) {
         texto2.innerHTML = "De exame, com a média de: " + result2.toFixed(2)
@@ -70,10 +71,10 @@ form2.addEventListener("submit", mediaPonderada)
 
 art.addEventListener('click', () => {
     ponderar.style.display = 'none'
-    media.style.display = 'block'
+    aritmetica.style.display = 'block'
 })
 
 pon.addEventListener('click', () => {
     ponderar.style.display = 'block'
-    media.style.display = 'none'
+    aritmetica.style.display = 'none'
 })
